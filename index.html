@@ -1,33 +1,39 @@
 <!DOCTYPE html>
-<html>
-<head>
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>TAP10</title>
-<link rel="stylesheet" type="text/css" href="app.css">
-<!-- アドレスバー等のブラウザのUIを非表示 -->
-<meta name="apple-mobile-web-app-capable" content="yes">
-<!-- default（Safariと同じ） / black（黒） / black-translucent（ステータスバーをコンテンツに含める） -->
-<meta name="apple-mobile-web-app-status-bar-style" content="black">
-<!-- ホーム画面に表示されるアプリ名 -->
-<meta name="apple-mobile-web-app-title" content="TAP10">
-<!-- ホーム画面に表示されるアプリアイコン -->
-<link rel="apple-touch-icon" href="images/icons/icon-152x152.png">
-<!-- ウェブアプリマニフェストの読み込み -->
-<link rel="manifest" href="manifest.json">
-<!-- ServiceWorkerの登録 -->
-<script>
-if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('sw.js')
-      .then((reg) => {
-        console.log('Service worker registered.', reg);
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>サンプルPWA</title>
+    <link rel="manifest" href="/manifest.json">
+    <style>
+      body {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+
+    <h1>サンプルPWAサイト</h1>
+
+    <img src="/image/logo-img.png">
+
+
+
+    <script>
+
+      navigator.serviceWorker.register('/sw.js').then(function() {
+
+        console.log('サービスワーカーの登録成功');
+
+      }).catch(function(err) {
+
+        console.log('サービスワーカーの登録ができませんでした：', err);
+
       });
-}
-</script>
-</head>
-<body>
-Hello!!
-<script src="app.js"></script>
-</body>
+
+    </script>
+
+  </body>
 </html>

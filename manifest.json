@@ -1,17 +1,17 @@
+
 {
-  "name":"TAP10",
-  "short_name":"TAP10",
-  "icons": [{
-      "src": "/icons/icon-192x192.png",
-      "sizes":"192x192",
-      "type": "image/png"
-    }, {
-      "src": "/icons/icon-512x512.png",
-      "sizes":"512x512",
-      "type": "image/png"
-    }],
-  "start_url": "https://nakanishi-asahi.github.io/pwa_test2.github.io",
+  "lang": "ja",
+  "short_name": "PWAサイト",
+  "name": "これはサンプルのPWAサイトです",
+  "start_url": "【最初に表示するURL】",
   "display": "standalone",
-  "background_color": "#FFFFFF",
-  "theme_color": "#FFFFFF"
+  "icons": [
+    {
+      "src": "/image/pwa-icon.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    }
+  ],
+  "background_color": "#2196F3",
+  "orientation": "portrait"
 }
